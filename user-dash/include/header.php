@@ -22,9 +22,11 @@
     
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/toast.css" rel="stylesheet">
 </head>
 
 <body>
+    <div>
     <!-- Navbar Start -->
     <div class="container-fluid nav-bar sticky-top px-0 px-lg-4 py-2 py-lg-0 shadow-sm">
         <div class="container">
@@ -41,11 +43,11 @@
                         <!-- Other navbar items can go here if needed -->
                     </div>
                     <div class="navbar-nav ms-auto">
-                        <span class="me-3 text-muted d-none d-lg-block">Logged in as: <strong id="currentUser ">User  Name</strong></span>
+                        <span class="me-3 text-muted d-none d-lg-block">Logged in as: <strong id="currentUser "><?php echo($_SESSION['username']) ?></strong></span>
                         <a href="logout.html" class="btn btn-secondary rounded py-2 px-4 d-none d-lg-block">Logout</a>
                     </div>
                     <div class="navbar-nav d-lg-none">
-                        <span class="text-muted">Logged in as: <strong id="currentUser ">User  Name</strong></span>
+                        <span class="text-muted">Logged in as: <strong id="currentUser "><?php echo($_SESSION['username']) ?></strong></span>
                         <a href="logout.html" class="btn btn-secondary rounded py-2 px-4">Logout</a>
                     </div>
                 </div>
@@ -58,11 +60,10 @@
         <div class="row">
             <!-- Sidebar Start -->
             <div class="col-lg-2 col-md-4 col-sm-12 pt-5 sidebar shadow bg-dark">
-                <div class="justify-content-center rounded bg-light p-3 mb-1 text-center">
-                    <img src="img/cobb Kaba.jpg" class="rounded-circle" style="width: 100px; height: 100px;" alt="Image">  
-                    <p class="mb-0">User  Name</p>
-                    <p class="text-primary mt-0">username@gmail.com</p>
-                </div>
+                <!-- <div class="justify-content-center rounded bg-light p-2 mb-1 text-center">
+                    <img src="img/sidebar-img.jpeg" class="rounded" style="width: 100px; height: 100px;" alt="Image">  
+                    <p class="text-primary mt-0 fs-5"><strong><?php echo $_SESSION['username'] ?></strong></s</p>
+                </div> -->
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-item nav-link custom-link" href="dash.php">
